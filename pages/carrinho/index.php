@@ -155,15 +155,17 @@ foreach ($carrinho as $chave => $item) {
             Total: R$ <?= number_format($total, 2, ',', '.') ?>
         </h3>
 
-        <a href="../produtos.php" class="botao-produto">
-            Continuar comprando
-        </a>
+        <div class="acoes-carrinho">
 
-        <br><br>
+    <a href="../produtos.php" class="botao-continuar">
+        Continuar comprando
+    </a>
 
-<a href="finalizar.php" class="botao-produto">
-    Finalizar pedido
-</a>
+    <a href="finalizar.php" class="botao-finalizar">
+        Finalizar pedido
+    </a>
+
+</div>
 
     <?php endif; ?>
 
