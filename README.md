@@ -9,47 +9,43 @@ O sistema permite visualizar produtos da fazenda, consultar detalhes, personaliz
 ## Tecnologias utilizadas
 
 - PHP
-- HTML5
-- CSS3
+- HTML
+- CSS
+- JavaScript
 - MySQL
 - XAMPP
 - Visual Studio Code
-
-## Funcionalidades implementadas
-
-- Página inicial do sistema.
-- Catálogo dinâmico de produtos.
-- Página de detalhes dos produtos.
-- Personalização do café gourmet.
-- Carrinho de compras.
-- Atualização de quantidades e remoção de produtos.
-- Finalização de pedidos.
-- Registro dos pedidos no banco de dados.
 
 ## Estrutura do projeto
 
 - `assets/` – arquivos CSS, JavaScript e imagens.
 - `config/` – conexão com o banco de dados.
-- `database/` – arquivo de exportação do banco de dados.
-- `pages/` – páginas do sistema.
-- `pages/carrinho/` – funcionalidades do carrinho e finalização dos pedidos.
+- `database/` – arquivo SQL para criação e preenchimento do banco.
+- `pages/` – páginas de produtos e funcionalidades do carrinho.
+- `index.php` – página inicial do sistema.
+
+## Requisitos para execução
+
+- XAMPP instalado.
+- Apache e MySQL.
+- Navegador de internet.
+- Visual Studio Code (opcional).
 
 ## Como executar o projeto
 
-1. Instale o XAMPP.
-2. Inicie os módulos Apache e MySQL.
-3. Copie a pasta `fazenda-boa-vista` para o diretório `htdocs` do XAMPP.
-4. Acesse o phpMyAdmin pelo endereço `http://localhost/phpmyadmin`.
-5. Crie um banco de dados chamado `fazenda_boa_vista`.
-6. Importe o arquivo `fazenda_boa_vista.sql`, localizado na pasta `database`.
-7. Verifique as configurações de conexão no arquivo `config/conexao.php`.
-8. Abra o sistema no navegador pelo endereço:
+1. Copie a pasta `fazenda-boa-vista` para o diretório `htdocs` do XAMPP.
+2. Abra o painel de controle do XAMPP e inicie os serviços Apache e MySQL.
+3. Acesse `http://localhost/phpmyadmin`.
+4. Crie um banco de dados chamado `fazenda_boa_vista`.
+5. Importe o arquivo `database/fazenda_boa_vista.sql` para esse banco.
+6. Confira as configurações de conexão no arquivo `config/conexao.php`.
+7. Abra o navegador e acesse:
 
    `http://localhost/fazenda-boa-vista/`
 
 ## Banco de dados
 
-O sistema utiliza o banco de dados MySQL, com tabelas para armazenamento de produtos, clientes, pedidos e itens dos pedidos.
+O banco utilizado é o MySQL. O arquivo SQL disponibilizado na pasta `database` contém a estrutura das tabelas e os dados necessários para iniciar o sistema.
 
 ## Execução local
 
