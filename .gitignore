@@ -1,0 +1,13 @@
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos temporários e logs
+*.log
+*.tmp
+
+# Arquivos temporários do XAMPP
+xampp-control.log
