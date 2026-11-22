@@ -35,6 +35,7 @@ foreach ($carrinho as $chave => $item) {
     $itens[] = [
         'produto' => $produto,
         'quantidade' => $quantidade,
+        'opcoes' => $item['opcoes'] ?? null,
         'subtotal' => $subtotal
     ];
 }
@@ -80,18 +81,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Registra os produtos do pedido
         $sqlItem = "INSERT INTO itens_pedido
-                    (pedido_id, produto_id, quantidade, preco_unitario)
-                    VALUES (:pedido_id, :produto_id, :quantidade, :preco)";
+    (pedido_id, produto_id, quantidade, preco_unitario, opcoes)
+    VALUES (:pedido_id, :produto_id, :quantidade, :preco, :opcoes)";
 
         $stmtItem = $pdo->prepare($sqlItem);
 
         foreach ($itens as $item) {
             $stmtItem->execute([
-                ':pedido_id' => $pedidoId,
-                ':produto_id' => $item['produto']['id'],
-                ':quantidade' => $item['quantidade'],
-                ':preco' => $item['produto']['preco']
-            ]);
+    ':pedido_id' => $pedidoId,
+    ':produto_id' => $item['produto']['id'],
+    ':quantidade' => $item['quantidade'],
+    ':preco' => $item['produto']['preco'],
+    ':opcoes' => json_encode($item['opcoes'], JSON_UNESCAPED_UNICODE)
+]);
         }
 
         $pdo->commit();
@@ -135,6 +137,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <h2>Finalizar Pedido</h2>
 
+<section class="resumo-compra">
+
     <h3>Resumo da compra</h3>
 
     <?php foreach ($itens as $item): ?>
@@ -144,16 +148,79 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             - Subtotal: R$
             <?= number_format($item['subtotal'], 2, ',', '.') ?>
         </p>
+
+            <?php if (!empty($item['opcoes'])): ?>
+                <p>
+                    <strong>Personalização do café:</strong><br>
+                    Tipo: <?= htmlspecialchars($item['opcoes']['tipo'] ?? '') ?><br>
+                    Categoria: <?= htmlspecialchars($item['opcoes']['categoria'] ?? '') ?><br>
+                    Torra: <?= htmlspecialchars($item['opcoes']['torra'] ?? '') ?><br>
+                    Peso: <?= htmlspecialchars($item['opcoes']['peso'] ?? '') ?>
+                </p>
+            <?php endif; ?>
+
     <?php endforeach; ?>
 
     <h3>
         Total: R$ <?= number_format($total, 2, ',', '.') ?>
     </h3>
+    </section>
 
 
 <h3>Dados do cliente</h3>
 
+
 <form action="finalizar.php" method="POST" class="formulario-cliente">
+
+<style>
+.formulario-cliente {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.formulario-cliente label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: 600;
+    color: #3f6048;
+}
+
+.formulario-cliente input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5d5d5;
+    border-radius: 7px;
+    font-size: 15px;
+    background: #fff;
+}
+
+.formulario-cliente input:focus {
+    outline: none;
+    border-color: #3f6048;
+    box-shadow: 0 0 0 3px rgba(63,96,72,0.12);
+}
+
+.formulario-cliente button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #3f6048;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario-cliente button:hover {
+    background: #304c38;
+}
+</style>
 
     <label for="nome">Nome completo:</label>
     <input type="text" id="nome" name="nome" required>

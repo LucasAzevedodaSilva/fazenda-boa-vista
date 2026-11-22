@@ -45,9 +45,9 @@ if (!$produto) {
 
     <main class="container pagina-produto">
 
-        <a href="produtos.php" class="voltar-produtos">
-            ← Voltar aos produtos
-        </a>
+        <a href="produtos.php" class="voltar-produtos" style="display: inline-block; background: #ffffff; color: #3f6045; padding: 12px 22px; border: 1px solid #3f6045; border-radius: 8px; margin-bottom: 25px; text-decoration: none; font-weight: bold;">
+    ← Voltar aos produtos
+</a>
 
         <div class="detalhe-produto">
 

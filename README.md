@@ -4,7 +4,23 @@ Sistema web para comercialização de produtos artesanais da Fazenda Boa Vista, 
 
 ## Sobre o projeto
 
-O sistema permite visualizar produtos da fazenda, consultar detalhes, personalizar o café gourmet, adicionar produtos ao carrinho e finalizar pedidos.
+O sistema permite visualizar os produtos da fazenda, consultar detalhes, personalizar o café gourmet, adicionar produtos ao carrinho e finalizar pedidos.
+
+## Funcionalidades implementadas
+
+- Página inicial da Fazenda Boa Vista.
+- Catálogo dinâmico de produtos.
+- Página de detalhes dos produtos.
+- Personalização do café gourmet:
+  - Tipo: grãos ou moído.
+  - Categoria: gourmet ou especial.
+  - Torra: clara, média ou escura.
+  - Peso: 250 g, 500 g ou 1 kg.
+- Carrinho de compras.
+- Atualização de quantidades e remoção de produtos.
+- Resumo da compra.
+- Cadastro dos dados do cliente durante a finalização.
+- Registro dos pedidos e respectivos itens no banco de dados.
 
 ## Tecnologias utilizadas
 
@@ -15,14 +31,6 @@ O sistema permite visualizar produtos da fazenda, consultar detalhes, personaliz
 - MySQL
 - XAMPP
 - Visual Studio Code
-
-## Estrutura do projeto
-
-- `assets/` – arquivos CSS, JavaScript e imagens.
-- `config/` – conexão com o banco de dados.
-- `database/` – arquivo SQL para criação e preenchimento do banco.
-- `pages/` – páginas de produtos e funcionalidades do carrinho.
-- `index.php` – página inicial do sistema.
 
 ## Requisitos para execução
 
@@ -37,7 +45,7 @@ O sistema permite visualizar produtos da fazenda, consultar detalhes, personaliz
 2. Abra o painel de controle do XAMPP e inicie os serviços Apache e MySQL.
 3. Acesse `http://localhost/phpmyadmin`.
 4. Crie um banco de dados chamado `fazenda_boa_vista`.
-5. Importe o arquivo `database/fazenda_boa_vista.sql` para esse banco.
+5. Importe o arquivo `database/fazenda_boa_vista.sql`.
 6. Confira as configurações de conexão no arquivo `config/conexao.php`.
 7. Abra o navegador e acesse:
 
@@ -45,8 +53,12 @@ O sistema permite visualizar produtos da fazenda, consultar detalhes, personaliz
 
 ## Banco de dados
 
-O banco utilizado é o MySQL. O arquivo SQL disponibilizado na pasta `database` contém a estrutura das tabelas e os dados necessários para iniciar o sistema.
+O sistema utiliza MySQL. O arquivo SQL disponibilizado na pasta `database` contém a estrutura das tabelas e os dados necessários para iniciar o sistema.
 
 ## Execução local
 
-O sistema foi desenvolvido para execução em ambiente local utilizando XAMPP, com Apache e MySQL.
+O projeto foi desenvolvido para execução em ambiente local utilizando XAMPP, com Apache e MySQL.
+
+## Projeto acadêmico
+
+Fazenda Boa Vista — Sistema Web para Comercialização de Produtos Artesanais.
