@@ -39,21 +39,53 @@ O sistema permite visualizar os produtos da fazenda, consultar detalhes, persona
 - Navegador de internet.
 - Visual Studio Code (opcional).
 
-## Como executar o projeto
+## Como instalar e executar o projeto
 
-1. Copie a pasta `fazenda-boa-vista` para o diretório `htdocs` do XAMPP.
-2. Abra o painel de controle do XAMPP e inicie os serviços Apache e MySQL.
-3. Acesse `http://localhost/phpmyadmin`.
-4. Crie um banco de dados chamado `fazenda_boa_vista`.
-5. Importe o arquivo `database/fazenda_boa_vista.sql`.
-6. Confira as configurações de conexão no arquivo `config/conexao.php`.
-7. Abra o navegador e acesse:
+1. Acesse o repositório do projeto no GitHub:
+   https://github.com/LucasAzevedodaSilva/fazenda-boa-vista
 
-   `http://localhost/fazenda-boa-vista/`
+2. Baixe o projeto pelo botão **Code → Download ZIP** ou clone o repositório.
+
+3. Coloque a pasta `fazenda-boa-vista` dentro do diretório `htdocs` do XAMPP.
+
+4. Abra o painel de controle do XAMPP e inicie os serviços **Apache** e **MySQL**.
+
+5. Acesse o phpMyAdmin pelo endereço:
+   http://localhost/phpmyadmin
+
+6. Crie um banco de dados com o nome:
+   `fazenda_boa_vista`
+
+7. Selecione o banco de dados criado, acesse a opção **Importar** e escolha o arquivo:
+   `database/fazenda_boa_vista.sql`
+
+8. Confirme a importação do arquivo SQL.
+
+9. Confira as configurações de conexão no arquivo:
+   `config/conexao.php`
+
+10. Abra o sistema no navegador:
+    http://localhost/fazenda-boa-vista/
+
+## Estrutura do projeto
+
+- `assets/` — arquivos de estilo, imagens e recursos utilizados no sistema.
+- `config/` — configuração da conexão com o banco de dados.
+- `database/` — arquivo SQL para criação e importação do banco de dados.
+- `pages/` — páginas do catálogo, detalhes dos produtos e carrinho.
+- `index.php` — página inicial do sistema.
+- `README.md` — documentação do projeto.
 
 ## Banco de dados
 
-O sistema utiliza MySQL. O arquivo SQL disponibilizado na pasta `database` contém a estrutura das tabelas e os dados necessários para iniciar o sistema.
+O sistema utiliza MySQL. O arquivo `database/fazenda_boa_vista.sql` contém a estrutura das tabelas e os dados necessários para iniciar o sistema.
+
+As tabelas utilizadas são:
+
+- `produtos`
+- `clientes`
+- `pedidos`
+- `itens_pedido`
 
 ## Execução local
 
@@ -61,4 +93,4 @@ O projeto foi desenvolvido para execução em ambiente local utilizando XAMPP, c
 
 ## Projeto acadêmico
 
-Fazenda Boa Vista — Sistema Web para Comercialização de Produtos Artesanais.
+**Fazenda Boa Vista — Sistema Web para Comercialização de Produtos Artesanais.**
