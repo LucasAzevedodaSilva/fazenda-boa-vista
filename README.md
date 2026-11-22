@@ -6,6 +6,14 @@ Sistema web para comercialização de produtos artesanais da Fazenda Boa Vista, 
 
 O sistema permite visualizar os produtos da fazenda, consultar detalhes, personalizar o café gourmet, adicionar produtos ao carrinho e finalizar pedidos.
 
+## Prova de Conceito (PoC)
+
+A Prova de Conceito demonstra a jornada principal de compra de produtos da Fazenda Boa Vista.
+
+O usuário pode acessar o catálogo, visualizar os detalhes dos produtos, personalizar o café gourmet, adicionar produtos ao carrinho, alterar quantidades, remover itens e finalizar o pedido, informando seus dados para registro da compra.
+
+A PoC utiliza PHP e MySQL para processar as operações e armazenar os dados dos clientes, pedidos e itens dos pedidos.
+
 ## Funcionalidades implementadas
 
 - Página inicial da Fazenda Boa Vista.
