@@ -102,3 +102,10 @@ O projeto foi desenvolvido para execução em ambiente local utilizando XAMPP, c
 ## Projeto acadêmico
 
 **Fazenda Boa Vista — Sistema Web para Comercialização de Produtos Artesanais.**
+
+## Integrantes da equipe
+
+- Lucas Azevedo da Silva
+- Rhiquelme da Costa Bandeira
+- Heitor de Araújo Camargo
+- Paulo Vitor Baltazar José
