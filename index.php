@@ -10,11 +10,17 @@
 
 <body>
 
-    <header class="hero">
-        <h1>Fazenda Boa Vista</h1>
-        <p>Produtos artesanais produzidos com qualidade e carinho.</p>
-        <a href="pages/produtos.php">Conheça nossos produtos</a>
-    </header>
+    
+<header class="hero">
+    <a href="pages/carrinho/index.php" class="botao-carrinho-topo">
+        🛒 Meu carrinho
+    </a>
+
+    <h1>Fazenda Boa Vista</h1>
+    <p>Produtos artesanais produzidos com qualidade e carinho.</p>
+    <a href="pages/produtos.php">Conheça nossos produtos</a>
+</header>
+
 
     <main>
         <section>
