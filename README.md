@@ -109,3 +109,9 @@ O projeto foi desenvolvido para execução em ambiente local utilizando XAMPP, c
 - Rhiquelme da Costa Bandeira
 - Heitor de Araújo Camargo
 - Paulo Vitor Baltazar José
+
+## Vídeo demonstrativo
+
+A demonstração da Prova de Conceito (PoC) está disponível no YouTube:
+
+[Assistir ao vídeo demonstrativo da Fazenda Boa Vista](https://youtu.be/_YmiMLZPcRo)
